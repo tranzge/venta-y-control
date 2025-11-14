@@ -79,12 +79,6 @@ header .container {
     align-items: center;
 }
 
-.logo {
-    font-size: 1.6rem;
-    font-weight: 900;
-    color: var(--primary-color);
-}
-
 nav a {
     text-decoration: none;
     color: var(--dark-color);
@@ -208,17 +202,6 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: var(--primary-color);
-}
-
-.hero-image-placeholder i {
-    font-size: 4.5rem;
-    margin-bottom: 15px;
-}
-
-.hero-image-placeholder p {
-    font-weight: 700;
-    font-size: 1.1rem;
     color: var(--primary-color);
 }
 
@@ -745,4 +728,68 @@ nav a:hover {
     border-radius: var(--border-radius);
     background-color: var(--card-bg);
     border: 1px solid #dee2e6;
+}
+/* Estilo para la imagen del POS en la sección HERO */
+.hero-pos-image {
+    width: 100%; /* Asegura que la imagen ocupe el ancho completo */
+    height: 100%; /* Asegura que ocupe la altura completa del contenedor */
+    object-fit: cover; /* Hace que la imagen se recorte para llenar el espacio sin deformarse */
+    border-radius: var(--border-radius); /* Mantiene los bordes redondeados consistentes */
+    display: block;
+}
+/* Estilos para el contenedor del logo en el header */
+.logo-container {
+    display: flex; /* Para alinear el icono y el texto del logo */
+    align-items: center; /* Centra verticalmente el icono con el texto */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    color: var(--dark-blue); /* Color principal del texto del logo */
+    font-size: 1.8rem; /* Tamaño de fuente para 'Venta y Control' */
+    font-weight: 700; /* Negrita para el texto del logo */
+}
+
+/* Estilo para el icono del logo */
+.navbar-logo {
+    height: 35px; /* Altura del icono. Puedes ajustar este valor */
+    width: auto; /* Mantiene la proporción del icono */
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+}
+
+/* Estilo para la parte 'PRO' del texto del logo */
+.pro-text {
+    color: var(--primary-color); /* Color azul/verde para 'PRO' */
+    margin-left: 5px; /* Espacio entre 'Control' y 'PRO' */
+}
+/* --- ESTILOS PARA EL LOGO Y TEXTO EN EL HEADER --- */
+
+/* Contenedor del logo: Alinea la imagen y el texto */
+.logo-container {
+    display: flex;             /* Hace que los elementos dentro se alineen en fila */
+    align-items: center;       /* Centra verticalmente el icono y el texto */
+    text-decoration: none;     /* Quita el subrayado del enlace por defecto */
+    color: #2c3e50;            /* Color para 'Venta y Control' (usa tu variable si la tienes: var(--dark-blue)) */
+    font-size: 1.8rem;         /* Tamaño de la fuente para 'Venta y Control' */
+    font-weight: 700;          /* Negrita para el texto del logo */
+}
+
+/* Estilo para el ICONO del logo */
+.navbar-logo {
+    height: 35px;              /* Altura del icono. Puedes ajustar este valor si lo ves muy grande/pequeño */
+    width: auto;               /* Mantiene la relación de aspecto del icono */
+    margin-right: 10px;        /* Espacio entre el icono y el texto */
+}
+
+/* Estilo para la palabra 'PRO' */
+.pro-text {
+    color: #00bcd4;            /* Color azul/verde para 'PRO' (usa tu variable si la tienes: var(--primary-color)) */
+    margin-left: 5px;          /* Pequeño espacio entre 'Control' y 'PRO' */
+}
+
+/* --- VERIFICAR ESTILO EXISTENTE DEL HEADER --- */
+/* Asegúrate de que tu 'header .container' tenga estas propiedades para distribuir los elementos */
+header .container {
+    display: flex;
+    justify-content: space-between; /* Empuja el logo a la izquierda y la navegación a la derecha */
+    align-items: center; /* Centra verticalmente todos los elementos del header */
+    padding: 15px 0; /* Espaciado interno superior e inferior */
+    /* Revisa que no haya un 'width' o 'max-width' muy pequeño que esté comprimiendo todo */
 }
