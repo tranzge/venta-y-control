@@ -5,21 +5,21 @@
     box-sizing: border-box;
 }
 
-/* TIPOGRAFÍA Y COLORES PROFESIONALES (Corporate Tech) */
+/* TIPOGRAFÍA Y COLORES PROFESIONALES (Verde Venta y Control) */
 :root {
-    --primary-color: #1a4f89; /* Azul corporativo oscuro y serio */
-    --secondary-color: #00bcd4; /* Teal/Cyan vibrante para acentos (Tech PRO) */
-    --accent-cta: #198754; /* Verde más oscuro para CTAs principales */
-    --dark-color: #212529; /* Negro corporativo */
-    --light-color: #f4f6f9; /* Fondo muy claro */
-    --card-bg: #ffffff;
-    --border-radius: 12px;
-    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
-    --shadow-medium: 0 10px 30px rgba(26, 79, 137, 0.15);
+    --primary-color: #111827;      /* Texto fuerte / títulos / acentos oscuros */
+    --secondary-color: #16A34A;    /* Verde acento (botones, iconos, métricas) */
+    --accent-cta: #16A34A;         /* Verde para CTAs principales */
+    --dark-color: #111827;         /* Texto principal */
+    --light-color: #F3F4F6;        /* Fondo muy claro */
+    --card-bg: #FFFFFF;
+    --border-radius: 14px;
+    --shadow-light: 0 4px 12px rgba(15, 23, 42, 0.06);
+    --shadow-medium: 0 10px 30px rgba(15, 23, 42, 0.18);
 }
 
 body {
-    font-family: 'Inter', sans-serif; /* Fuente moderna y limpia */
+    font-family: 'Inter', sans-serif; /* Texto general */
     line-height: 1.6;
     color: var(--dark-color);
     background-color: var(--light-color);
@@ -32,6 +32,11 @@ body {
 }
 
 /* --- TIPOGRAFÍA --- */
+h1, h2, h3, h4, h5 {
+    font-family: 'Sora', 'Inter', system-ui, sans-serif;
+    letter-spacing: -0.02em;
+}
+
 h2 {
     font-size: 2.8rem;
     font-weight: 900;
@@ -49,7 +54,7 @@ h3 {
 
 .tagline {
     display: inline-block;
-    color: var(--secondary-color); /* Acento Teal */
+    color: var(--secondary-color);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -92,45 +97,46 @@ nav a:hover {
 }
 
 .cta-header {
-    background-color: var(--primary-color);
+    background-color: var(--accent-cta);
     color: white !important;
     padding: 10px 20px;
     border-radius: var(--border-radius);
     margin-left: 30px;
     transition: background-color 0.3s, box-shadow 0.3s;
     font-weight: 700;
-    box-shadow: 0 4px 10px rgba(26, 79, 137, 0.3);
+    box-shadow: 0 4px 10px rgba(22, 163, 74, 0.35);
 }
 
 .cta-header:hover {
-    background-color: #123c6b;
-    box-shadow: 0 6px 15px rgba(26, 79, 137, 0.4);
+    background-color: #15803D;
+    box-shadow: 0 6px 15px rgba(22, 163, 74, 0.5);
 }
 
 /* --- BOTONES CTA --- */
 .cta-primary, .cta-secondary {
-    display: inline-flex; /* Para alinear íconos */
+    display: inline-flex;
     align-items: center;
     gap: 8px;
     padding: 12px 25px;
     text-decoration: none;
     border-radius: var(--border-radius);
     font-weight: 700;
-    transition: transform 0.3s, box-shadow 0.3s;
-    white-space: nowrap; /* Evita que el texto del botón se rompa */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+    white-space: nowrap;
 }
 
 .cta-primary {
     background-color: var(--accent-cta);
     color: white;
     border: 2px solid var(--accent-cta);
-    box-shadow: 0 4px 10px rgba(25, 135, 84, 0.3);
+    box-shadow: 0 4px 10px rgba(22, 163, 74, 0.4);
 }
 
 .cta-primary:hover {
-    background-color: #157347;
+    background-color: #15803D;
+    border-color: #15803D;
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(25, 135, 84, 0.4);
+    box-shadow: 0 6px 15px rgba(22, 163, 74, 0.6);
 }
 
 .cta-secondary {
@@ -146,10 +152,10 @@ nav a:hover {
     transform: translateY(-2px);
 }
 
-/* Estilo para el botón grande del FOOTER CTA FINAL */
+/* Botón FOOTER CTA FINAL */
 .cta-primary-large { 
-    background: linear-gradient(90deg, var(--secondary-color) 0%, #00e5ff 100%);
-    color: var(--dark-color);
+    background: linear-gradient(90deg, var(--secondary-color) 0%, #22C55E 100%);
+    color: #FFFFFF;
     padding: 18px 40px;
     border-radius: 50px; 
     font-weight: 900;
@@ -159,13 +165,34 @@ nav a:hover {
     gap: 10px;
     margin: 20px 0;
     font-size: 1.2rem;
-    transition: transform 0.3s;
-    box-shadow: 0 8px 20px rgba(0, 188, 212, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 8px 20px rgba(34, 197, 94, 0.4);
 }
 
 .cta-primary-large:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 12px 30px rgba(0, 188, 212, 0.6);
+    box-shadow: 0 12px 30px rgba(34, 197, 94, 0.6);
+}
+
+/* Botón pequeño de soporte */
+.cta-primary-small {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 22px;
+    border-radius: var(--border-radius);
+    background-color: var(--accent-cta);
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 700;
+    border: 2px solid var(--accent-cta);
+    margin-top: 20px;
+}
+
+.cta-primary-small:hover {
+    background-color: #15803D;
+    border-color: #15803D;
+    box-shadow: 0 6px 15px rgba(22, 163, 74, 0.5);
 }
 
 /* --- 2. SECCIÓN HERO --- */
@@ -238,7 +265,7 @@ nav a:hover {
 .metric {
     font-size: 3.5rem;
     font-weight: 900;
-    color: var(--secondary-color); /* Acento Teal */
+    color: var(--secondary-color);
     line-height: 1;
     margin-bottom: 5px;
 }
@@ -249,7 +276,6 @@ nav a:hover {
     text-transform: uppercase;
     opacity: 0.9;
 }
-
 
 /* --- 4. SECCIÓN KITS (SOLUCIONES RDS) --- */
 .kits-section {
@@ -295,7 +321,7 @@ nav a:hover {
     border: 3px solid var(--accent-cta);
     position: relative;
     background-color: #f7fffb;
-    box-shadow: 0 10px 20px rgba(25, 135, 84, 0.1);
+    box-shadow: 0 10px 20px rgba(22, 163, 74, 0.16);
 }
 
 .kit-card:hover {
@@ -358,11 +384,13 @@ nav a:hover {
     text-decoration: none;
     border-radius: var(--border-radius);
     font-weight: 800;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
 .kit-cta:hover {
-    background-color: #123c6b;
+    background-color: #020617;
+    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.45);
+    transform: translateY(-2px);
 }
 
 .note-hardware {
@@ -393,7 +421,7 @@ nav a:hover {
     box-shadow: var(--shadow-light);
     text-align: left;
     border-bottom: 4px solid var(--primary-color);
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .feature-card:hover {
@@ -417,7 +445,6 @@ nav a:hover {
 .feature-card p {
     color: #495057;
 }
-
 
 /* --- 6. SECCIÓN TESTIMONIO --- */
 .testimonial-section {
@@ -451,10 +478,10 @@ nav a:hover {
     margin-top: 20px;
 }
 
-/* --- 7. NUEVA SECCIÓN: V&C ACADEMY / SOPORTE --- */
+/* --- 7. SECCIÓN SOPORTE --- */
 .support-section {
     padding: 80px 0;
-    background: #f7fffb; /* Color ligeramente verde para denotar soporte/éxito */
+    background: #f7fffb;
     border-top: 1px solid #e9ecef;
     border-bottom: 1px solid #e9ecef;
 }
@@ -490,35 +517,9 @@ nav a:hover {
 }
 
 .support-points i {
-    color: var(--accent-cta); /* Verde de la CTA */
+    color: var(--accent-cta);
     font-size: 1.2rem;
 }
-
-.support-image-placeholder {
-    flex: 1;
-    min-height: 300px;
-    background: var(--card-bg);
-    border: 1px solid #dee2e6;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-light);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--secondary-color);
-}
-
-.support-image-placeholder i {
-    font-size: 4rem;
-    margin-bottom: 15px;
-}
-
-.support-image-placeholder p {
-    font-weight: 700;
-    font-size: 1rem;
-    color: var(--primary-color);
-}
-
 
 /* --- 8. SECCIÓN VIDEO DEMO --- */
 .video-demo-section {
@@ -540,19 +541,7 @@ nav a:hover {
     display: block;
 }
 
-.video-note {
-    /* CUADRO CREMA/AMARILLO */
-    background-color: #fff3cd; 
-    color: #664d03;
-    padding: 15px;
-    border-bottom-left-radius: var(--border-radius);
-    border-bottom-right-radius: var(--border-radius);
-    font-size: 0.95rem;
-    font-weight: 600;
-}
-
-
-/* --- 9. FOOTER/CTA FINAL (BLOQUE NEGRO GRANDE) --- */
+/* --- 9. FOOTER/CTA FINAL --- */
 .cta-footer {
     background-color: var(--dark-color);
     color: white;
@@ -605,13 +594,12 @@ nav a:hover {
     h2 { font-size: 2.4rem; }
     
     .hero-section .container,
-    .support-section .container { /* Aplicamos flex-column a la nueva sección también */
+    .support-section .container {
         flex-direction: column;
         text-align: center;
     }
 
-    .hero-image-placeholder,
-    .support-image-placeholder {
+    .hero-image-placeholder {
         width: 100%;
         min-height: 250px;
         margin-top: 30px;
@@ -621,20 +609,22 @@ nav a:hover {
         flex-direction: column;
         gap: 10px;
     }
+
     nav {
         display: flex;
         justify-content: center;
         width: 100%;
     }
+
     nav a {
         margin: 0 10px;
         font-size: 0.9rem;
     }
+
     .cta-header {
         margin-left: 10px;
     }
 
-    /* FIX: Héroe no se encime */
     .hero-cta-group {
         display: flex;
         flex-direction: column;
@@ -643,19 +633,23 @@ nav a:hover {
         gap: 10px;
     }
     
-    .cta-primary, .cta-secondary {
+    .cta-primary,
+    .cta-secondary {
         width: 100%;
         margin-left: 0;
+        justify-content: center;
     }
 
     .support-content {
         text-align: center;
     }
+
     .support-points {
-        text-align: left; /* Mantener la lista justificada */
+        text-align: left;
         margin: 0 auto;
         max-width: 400px;
     }
+
     .support-points p {
         justify-content: flex-start;
     }
@@ -663,6 +657,7 @@ nav a:hover {
     .results-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .feature-card {
         text-align: center;
     }
@@ -672,124 +667,88 @@ nav a:hover {
     .kits-grid {
         grid-template-columns: 1fr;
     }
+
     .results-grid {
         grid-template-columns: 1fr;
     }
+
     .feature-card i {
         display: block;
         text-align: center;
     }
+
     .cta-footer .contact-info {
         display: flex;
         flex-direction: column;
     }
+
     .cta-footer .contact-info span {
         margin: 5px 0;
     }
 }
-/* AJUSTES PARA SOLUCIONAR PROBLEMAS VISUALES */
 
-/* 1. CORRECCIÓN DE ¡NUNCA SE CAE! */
+/* Ajustes visuales extra */
+
+/* 1. ¡Nunca se cae! */
 .metric-text {
-    font-size: 2.8rem; /* Un poco más pequeño que el +35% */
+    font-size: 2.8rem;
     font-weight: 900;
     color: var(--secondary-color);
     line-height: 1.1;
-    margin-bottom: 5px; /* Separación del porcentaje */
+    margin-bottom: 5px;
     display: block;
 }
 
-/* 2. CORRECCIÓN DE ESPACIO EN BOTONES DEL HERO */
+/* 2. Espacio entre botones del hero */
 .hero-cta-group {
     display: flex;
-    gap: 15px; /* Añade espacio entre los botones */
-    flex-wrap: wrap; /* Mantiene la adaptabilidad */
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-/* 3. NUEVO ICONO DE GARANTÍA EN SOPORTE */
-.support-points i.fa-user-shield {
-    color: var(--primary-color); /* Color azul de confianza para la garantía */
-}
 /* --- ESTILOS PARA IMÁGENES DE KITS --- */
 .kit-image {
-    width: 100%; /* La imagen ocupa el 100% del ancho de su contenedor */
-    height: auto; /* Mantiene la proporción */
-    border-radius: var(--border-radius); /* Bordes redondeados consistentes */
-    margin-bottom: 20px; /* Separación del título del kit */
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
     box-shadow: var(--shadow-light);
 }
 
-/* Contenedor de las imágenes dentro de las tarjetas */
 .kit-card .kit-image-wrapper {
-    /* Si decides darle un alto fijo, usa esto para que la imagen se centre y corte */
-    /* height: 200px; */ 
     overflow: hidden;
     margin-bottom: 15px;
     border-radius: var(--border-radius);
     background-color: var(--card-bg);
     border: 1px solid #dee2e6;
 }
+
 /* Estilo para la imagen del POS en la sección HERO */
 .hero-pos-image {
-    width: 100%; /* Asegura que la imagen ocupe el ancho completo */
-    height: 100%; /* Asegura que ocupe la altura completa del contenedor */
-    object-fit: cover; /* Hace que la imagen se recorte para llenar el espacio sin deformarse */
-    border-radius: var(--border-radius); /* Mantiene los bordes redondeados consistentes */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
     display: block;
 }
-/* Estilos para el contenedor del logo en el header */
+
+/* --- ESTILOS PARA LOGO EN EL HEADER --- */
 .logo-container {
-    display: flex; /* Para alinear el icono y el texto del logo */
-    align-items: center; /* Centra verticalmente el icono con el texto */
-    text-decoration: none; /* Quita el subrayado del enlace */
-    color: var(--dark-blue); /* Color principal del texto del logo */
-    font-size: 1.8rem; /* Tamaño de fuente para 'Venta y Control' */
-    font-weight: 700; /* Negrita para el texto del logo */
-}
-
-/* Estilo para el icono del logo */
-.navbar-logo {
-    height: 35px; /* Altura del icono. Puedes ajustar este valor */
-    width: auto; /* Mantiene la proporción del icono */
-    margin-right: 10px; /* Espacio entre el icono y el texto */
-}
-
-/* Estilo para la parte 'PRO' del texto del logo */
-.pro-text {
-    color: var(--primary-color); /* Color azul/verde para 'PRO' */
-    margin-left: 5px; /* Espacio entre 'Control' y 'PRO' */
-}
-/* --- ESTILOS PARA EL LOGO Y TEXTO EN EL HEADER --- */
-
-/* Contenedor del logo: Alinea la imagen y el texto */
-.logo-container {
-    display: flex;             /* Hace que los elementos dentro se alineen en fila */
-    align-items: center;       /* Centra verticalmente el icono y el texto */
-    text-decoration: none;     /* Quita el subrayado del enlace por defecto */
-    color: #2c3e50;            /* Color para 'Venta y Control' (usa tu variable si la tienes: var(--dark-blue)) */
-    font-size: 1.8rem;         /* Tamaño de la fuente para 'Venta y Control' */
-    font-weight: 700;          /* Negrita para el texto del logo */
-}
-
-/* Estilo para el ICONO del logo */
-.navbar-logo {
-    height: 35px;              /* Altura del icono. Puedes ajustar este valor si lo ves muy grande/pequeño */
-    width: auto;               /* Mantiene la relación de aspecto del icono */
-    margin-right: 10px;        /* Espacio entre el icono y el texto */
-}
-
-/* Estilo para la palabra 'PRO' */
-.pro-text {
-    color: #00bcd4;            /* Color azul/verde para 'PRO' (usa tu variable si la tienes: var(--primary-color)) */
-    margin-left: 5px;          /* Pequeño espacio entre 'Control' y 'PRO' */
-}
-
-/* --- VERIFICAR ESTILO EXISTENTE DEL HEADER --- */
-/* Asegúrate de que tu 'header .container' tenga estas propiedades para distribuir los elementos */
-header .container {
     display: flex;
-    justify-content: space-between; /* Empuja el logo a la izquierda y la navegación a la derecha */
-    align-items: center; /* Centra verticalmente todos los elementos del header */
-    padding: 15px 0; /* Espaciado interno superior e inferior */
-    /* Revisa que no haya un 'width' o 'max-width' muy pequeño que esté comprimiendo todo */
+    align-items: center;
+    text-decoration: none;
+    color: var(--dark-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.navbar-logo {
+    height: 35px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.pro-text {
+    color: var(--secondary-color);
+    margin-left: 5px;
 }
